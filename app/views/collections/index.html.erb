@@ -1,0 +1,9 @@
+<h2>Current Collections</h2>
+<% if @collections.any? %>
+  <% @collections.reverse.each do |collection| %>
+    <p><%= link_to collection.title, collection_path(collection) %></p>
+  <% end %>
+<% else %>
+  <p>There aren't any collections right now :( You should consider creating one!</p>
+<% end %>
+<%= link_to 'Create a new collection', new_collection_path, class: 'btn btn-lg btn-primary' %>

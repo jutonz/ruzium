@@ -1,0 +1,6 @@
+<%= bootstrap_form_for [@collection, @image] do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_field :description %>
+  <%= form.text_field :source_url %>
+  <%= form.submit 'Add image', class: 'btn btn-lg btn-primary' %>
+<% end %>

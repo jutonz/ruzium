@@ -1,0 +1,6 @@
+<%= bootstrap_form_for @collection, url: collections_path do |form| %>
+  <h1>Create a new collection</h1>
+  <%= form.text_field :title %>
+  <%= form.text_field :description, placeholder: 'Optional' %>
+  <%= form.submit 'Create new collection', class: 'btn btn-lg btn-primary' %>
+<% end %>
